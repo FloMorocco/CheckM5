@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout rows="repeat(8, 1*)" columns="repeat(8, 1*)" class="w-full aspect-square" loaded="{{ onBoardLoaded }}">
+  <Repeater items="{{ cells }}" row="0" col="0" colSpan="8" rowSpan="8">
+    <Repeater.itemTemplate>
+      <GridLayout row="{{ row }}" col="{{ col }}" tap="{{ $parent.onCellTap }}">
+        <!-- Cell background -->
+        <ContentView class="{{ getCellClass() }}" />
+        
+        <!-- Piece (if exists) -->
+        <Image src="{{ pieceImage }}" class="w-full h-full p-1" visibility="{{ pieceImage ? 'visible' : 'collapsed' }}" />
+        
+        <!-- Spell effect (if exists) -->
+        <ContentView class="{{ getSpellClass() }}" visibility="{{ hasSpell ? 'visible' : 'collapsed' }}" />
+        
+        <!-- Move indicator -->
+        <ContentView class="bg-blue-500 opacity-50 rounded-full m-4" 
+                    visibility="{{ isValidMove ? 'visible' : 'collapsed' }}" />
+      </GridLayout>
+    </Repeater.itemTemplate>
+  </Repeater>
+</GridLayout>

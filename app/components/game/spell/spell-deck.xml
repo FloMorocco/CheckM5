@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout rows="auto" columns="*, *, *" class="p-2 bg-gray-800">
+  <Repeater items="{{ spells }}" row="0" colSpan="3">
+    <Repeater.itemTemplate>
+      <GridLayout col="{{ index }}" class="p-1">
+        <ContentView class="bg-gray-700 rounded-lg p-2" tap="{{ $parent.onSpellTap }}">
+          <StackLayout>
+            <Image src="{{ getSpellImage() }}" class="w-12 h-12" />
+            <Label text="{{ name }}" class="text-center text-white" />
+          </StackLayout>
+        </ContentView>
+      </GridLayout>
+    </Repeater.itemTemplate>
+  </Repeater>
+</GridLayout>

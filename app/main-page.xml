@@ -1,0 +1,22 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-gray-100">
+    <ActionBar title="CheckM Chess" class="bg-indigo-600 text-white" />
+    
+    <StackLayout class="p-4 space-y-4">
+        <Label text="Welcome to CheckM Chess" class="text-2xl font-bold text-center mb-8" />
+        
+        <Button text="New Game (2 Players)" tap="{{ onNewGameTap }}" 
+                class="btn p-4 bg-indigo-600 text-white rounded-lg text-lg" />
+        
+        <Button text="Create Online Game" tap="{{ onCreateOnlineGameTap }}" 
+                class="btn p-4 bg-indigo-600 text-white rounded-lg text-lg" />
+        
+        <Button text="Join Online Game" tap="{{ onJoinOnlineGameTap }}" 
+                class="btn p-4 bg-indigo-600 text-white rounded-lg text-lg" />
+        
+        <Button text="Leaderboard" tap="{{ onLeaderboardTap }}" 
+                class="btn p-4 bg-indigo-600 text-white rounded-lg text-lg" />
+        
+        <Button text="Upgrade Plan" tap="{{ onUpgradePlanTap }}" 
+                class="btn p-4 bg-purple-600 text-white rounded-lg text-lg" />
+    </StackLayout>
+</Page>

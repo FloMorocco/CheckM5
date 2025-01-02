@@ -1,0 +1,8 @@
+<Frame defaultPage="main-page">
+    <Page>
+        <ActionBar title="CheckM Chess" />
+        <GridLayout>
+            <Label text="Loading..." class="text-center" />
+        </GridLayout>
+    </Page>
+</Frame>
